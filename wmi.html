@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halil Filik</title>
+
+    <link rel="shortcut icon" href="assets/img/icon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <link rel="stylesheet" href="assets/css/scroll-bar.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-wrapper mt-5">
+                <div class="row header-content">
+                    <div class="header-title col-md-8" style="visibility: hidden;">
+                        <a href="index.html">Blog Title</a>
+                    </div>
+                    <div class="header-menu col-md-4">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="blog.html" style="opacity: 100%;">Blog</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-wrapper">
+        <div class="container mt-4">
+            <div class="blog-container">
+                <div class="blog-top-title">
+                    Halil Filik
+                </div>
+                <div class="blog-container-text">
+                    <div class="blog-text-meta-info">
+                        <ul>
+                            <li>
+                                <div class="blog-text-date">
+                                    23 May 2021
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="blog-text-title">
+                        WMI For Malwares
+                    </div>
+                    <div class="blog-text">
+						<h3>WMI Nedir</h3>
+						<p>WMI (Windows Management Instrumentation, Windows Yönetim Araçları); Windows işletim sistemlerinde hemen hemen her nesnenin kontrol edilebilmesini sağlayan, işletim sistemindeki operasyonları ve yönetim işlevlerini gerçekleştirebilen bir teknolojidir. Tüm bu işleri bünyesindeki 900’e yakın sınıf sayesinde gerçekleştirebilir. Bu sınıfların her birinde çeşitli amaçlara yönelik olarak hazırlanmış fonksiyonlar bulunmaktadır.
+						<h3>WMI Sorgusu Nedir</h3>
+						<p>Sisteminizde bulunan bilgisayarların Donanımsal ya da Yazılımsal bilgilerine ulaşmak ve ulaşılan bu değerlerle müdahalede bulunmak için kullanılan sorgulardır
+						<p>En basit örnek olarak bilgisayarda process çalıştırabilir ya da kapatabiliriz.
+						<h3>CIM Nedir</h3>
+						<p>CIM (Common Information Model, Ortak Bilgi Modeli). bir işletmenin/ağın/sistemin farklı bölümleri hakkında bilgi içeren genişletilebilir, nesne yönelimli bir veri modelidir. 3 farklı sınıfı vardır.
+						<h3>CIM Core</h3>
+						<p>Çekirdek sınıflar, tüm yönetim alanları için geçerli olan yönetilen nesneleri temsil eder. Bu sınıflar, yönetilen sistemleri analiz etmek ve tanımlamak için temel bir wordlist barındırır. 
+						<p>__Parameters ve __SystemSecurity sınıfları, çekirdek sınıfların örnekleridir.
+						<h3>WMI Common</h3>
+						<p>Ortak sınıflar, belirli yönetim alanları için geçerli olan nesneleri temsil eder. Bununla birlikte, ortak sınıflar belirli bir uygulamadan veya teknolojiden bağımsızdır. Ortak sınıflar, çekirdek sınıfların bir uzantısıdır. CIM_UnitaryComputerSystem sınıfı, ortak bir sınıf örneğidir.
+						<p>Kısacası belirli alanları yöneten çekirdek gibi davranan sınıflardır.
+						<h3>CIM Extented</h3>
+						<p>Genişletilmiş sınıflar, bazı özel eklemeler ile ortak sınıfları temsil eder.
+						<p>Örnek olarak, Çekirdek Sınıf: Etçiller, Ortak Sınıf: Kedigiller, Genişletilmiş Sınıf: Kaplan
+						<p>Genişletilmiş bir sınıf tipik olarak UNIX veya Microsoft Win32 ortamı gibi belirli bir platform için geçerlidir. Win32_ComputerSystem sınıfı, genişletilmiş bir sınıf örneğidir ve sadece Windows’a özgüdür. Bizi asıl ilgilendiren kısım bu sınıflardır.
+						<h3>Neden WMI kullanıyoruz?</h3>
+						<p>Genellike sistem yöneticileri, sistemi kontrol altına almak, belirli işleri otomatize etmek ve uzaktan sistemi kontrolü için kullanırlar.
+						<h3>Peki Zararlı Yazılımlar neden WMI kullanıyor</h3>
+						<p>Aynı iş farklı amaç. Bazı örnekleri ise; Uzaktan sistemi kontrol etmek, güvenlik ayarlarını değiştirmek, sistem hakkında bilgi toplamak, kullanıcı ve grup yetkilerini değiştirmek, sistem ayarlarını bozmak veya değiştirmek, processleri zamanlayarak istenilen zamanda çalıştırmak, kod çalıştırmak
+						<h3>WQL Nedir</h3>
+						<p>WMI Query Language (SQL For WMI), Bildiğimiz SQL mantığında çalışan bir sorgu dilidir.
+						<p>Örnek bi WQL sorgusu: SELECT * FROM Win32_Service WHERE State='Stopped'
+						<h3>WMI Sorgu Türleri</h3>
+						<p>Senkron sorgu: küçük sorgular veya yerel bir sisteme yapılan sorgular için iyidir.
+						<p>Asenkron sorgu: Asenkron sorgular daha karmaşıktır ve daha düşük düzeyde güvenlik sağlar, ancak genellikle sistem performansını iyileştirir.
+						<h3>Senkron Sorgu</h3>
+						<p>Bu sorgu türü sadece 1 adet interface gerektirir. Bu nedenle de asenkron sorguya göre kullanması kolaydır. Fakat senkron sorgu, uygulama bir network üzerinden büyük sorgular yaparken kilitlenmesine sebep olabilir. Daha çok küçük sorgular için tavsiye edilir.
+						<h3>Asenkron Sorgu</h3>
+						<p>Asenkron sorgu, kodlamak zor olsa da, sistem veya ağ performansının büyük bir veri grubunun sorgulanmasından etkileneceği durumlarda tercih edilen sorgu türüdür. Fakat düzgün ayarlanmadığı zaman performans artışı yerine düşüş yaşanabilir. Kullanmak için programlama dillerini belirli bir seviyede bilmek gerekir.
+						<h3>Senkron vs Asenkron</h3>
+						<img src="assets/img/wmi.jpg" alt="" srcset="">
+						<p>
+						<p>Örnek kullanım alanları;
+						<p>Senkron sorgu: Bir Trojan zararlısı, zararlı linkten payload indirmek için senkron sorgu kullanması daha mantıklıdır.
+						<p>Asenkron sorgu: Bir Worm zararlısı, bağlı olduğu ağdaki sistemlere bulaşmak için bu sorguyu kullanırsa hem daha verimli hem de sıkıntı yaşama ihtimalini düşürür.
+						<h3>Bir Zararlının WMI Kullandığının En Belirgin Göstergesi</h3>
+						<p>Şüphelendiğimiz bir zararlı, wmic.exe’ye şüpheli bir parametre gönderip çalıştırıyorsa WMI kullandığını söyleyebiliriz.
+						<p>Örnek olarak: wmic.exe shadowcopy delete parametresi ile zararlı, sistemde ki shadow dosyaları silebilmektedir.
+						<h3>Zararlı yazılımların kullandığı bazı WMI teknikleri</h3>
+						<p>Zararlılar, Win32_ComputerSystem sorgusunu yapıp dönüş değerine bakarak kendisinin Vmware, VirtualBox gibi sanallaştırma ortamlarında çalıştıklarını anlayabilirler
+						<p>Miner Downloader zararlısı, wmi sorgularını kullanarak  internete bağlı olup olmadığını anlayabilmektedir.
+						<p>winmgmts:{impersonationLevel=Impersonate}!\\.\root\CIMV2:Win32_PingStatus.Address= ‘www.google.com’
+						<p>Not: impersonationLevel, WMI’ya bağlanmak için kullanılacak seviyeyi belirtir. Impersonate seviyesi WMI sorguları yapmak için önerilen seviyedir.
+						<h3>WMI Sorgularını çalıştırma</h3>
+						<p>WMI sorgularını bir çok şekilde çalıştırabiliriz; Powershell, Powershell Script, VBScript, C/C++, Python, WMI Test Tool (WBEMTest.exe), Third Party Services (SolarWinds  vs.)
+
+						<h3></h3>
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid mt-5"></div>
+            <hr>
+        </div>
+        <div class="container text-center mt-5 mb-5" >
+            <div class="copyright">
+                © 2021 All rights reserved.
+            </div>   
+        </div>
+        
+    </footer>
+
+</body>
+
+</html>
