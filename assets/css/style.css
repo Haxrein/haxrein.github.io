@@ -66,8 +66,8 @@ header .header-wrapper .header-menu ul li a:hover{
     width: 275px;
     height: 275px;
     border-radius: 50%;
-    background-color: #444;
-    border: 15px solid #444;
+    background-color: black;
+    border: 15px solid black;
     -webkit-box-shadow: 0 0 25px 0 rgb(0 0 0 / 80%);
     -moz-box-shadow: 0 0 25px 0 rgba(0,0,0,.8);
     box-shadow: 0 0 25px 0 rgb(0 0 0 / 80%);   
@@ -416,6 +416,7 @@ footer hr:not([size]) {
 
 .blog-wrapper .blog-container .blog-container-text .blog-text-meta-info ul li > div{
     padding: 1%;
+
 }
 
 /* BLOG TEXT WRAPPER END */
