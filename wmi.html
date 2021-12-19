@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/scroll-bar.css">
 	<style> 
 body { 
- background-color: black; 
+ background-color: #1b1b21; 
  } 
 </style> 
 </head>
@@ -52,12 +52,12 @@ body {
     </header>
 
     <div class="blog-wrapper">
-        <div class="container mt-4" style="background-color: black;">
+        <div class="container mt-4" style="background-color: #1b1b21;">
             <div class="blog-container" >
                 <div class="blog-top-title" style="color:white">
                     Halil Filik
                 </div>
-                <div class="blog-container-text" style="background-color: black;">
+                <div class="blog-container-text" style="background-color: #1b1b21;">
                     <div class="blog-text-meta-info">
                         <ul>
                             <li>
@@ -73,49 +73,79 @@ body {
                     <div class="blog-text" style="color:white" >
 						<h3>WMI Nedir</h3>
 						<p>WMI (Windows Management Instrumentation, Windows Yönetim Araçları); Windows işletim sistemlerinde hemen hemen her nesnenin kontrol edilebilmesini sağlayan, işletim sistemindeki operasyonları ve yönetim işlevlerini gerçekleştirebilen bir teknolojidir. Tüm bu işleri bünyesindeki 900’e yakın sınıf sayesinde gerçekleştirebilir. Bu sınıfların her birinde çeşitli amaçlara yönelik olarak hazırlanmış fonksiyonlar bulunmaktadır.
+						<br>
+						<br>
 						<h3>WMI Sorgusu Nedir</h3>
 						<p>Sisteminizde bulunan bilgisayarların Donanımsal ya da Yazılımsal bilgilerine ulaşmak ve ulaşılan bu değerlerle müdahalede bulunmak için kullanılan sorgulardır
 						<p>En basit örnek olarak bilgisayarda process çalıştırabilir ya da kapatabiliriz.
+						<br>
+						<br>
 						<h3>CIM Nedir</h3>
 						<p>CIM (Common Information Model, Ortak Bilgi Modeli). bir işletmenin/ağın/sistemin farklı bölümleri hakkında bilgi içeren genişletilebilir, nesne yönelimli bir veri modelidir. 3 farklı sınıfı vardır.
+						<br>
+						<br>
 						<h3>CIM Core</h3>
 						<p>Çekirdek sınıflar, tüm yönetim alanları için geçerli olan yönetilen nesneleri temsil eder. Bu sınıflar, yönetilen sistemleri analiz etmek ve tanımlamak için temel bir wordlist barındırır. 
 						<p>__Parameters ve __SystemSecurity sınıfları, çekirdek sınıfların örnekleridir.
+						<br>
+						<br>
 						<h3>WMI Common</h3>
 						<p>Ortak sınıflar, belirli yönetim alanları için geçerli olan nesneleri temsil eder. Bununla birlikte, ortak sınıflar belirli bir uygulamadan veya teknolojiden bağımsızdır. Ortak sınıflar, çekirdek sınıfların bir uzantısıdır. CIM_UnitaryComputerSystem sınıfı, ortak bir sınıf örneğidir.
 						<p>Kısacası belirli alanları yöneten çekirdek gibi davranan sınıflardır.
+						<br>
+						<br>
 						<h3>CIM Extented</h3>
 						<p>Genişletilmiş sınıflar, bazı özel eklemeler ile ortak sınıfları temsil eder.
 						<p>Örnek olarak, Çekirdek Sınıf: Etçiller, Ortak Sınıf: Kedigiller, Genişletilmiş Sınıf: Kaplan
 						<p>Genişletilmiş bir sınıf tipik olarak UNIX veya Microsoft Win32 ortamı gibi belirli bir platform için geçerlidir. Win32_ComputerSystem sınıfı, genişletilmiş bir sınıf örneğidir ve sadece Windows’a özgüdür. Bizi asıl ilgilendiren kısım bu sınıflardır.
+						<br>
+						<br>
 						<h3>Neden WMI kullanıyoruz?</h3>
 						<p>Genellike sistem yöneticileri, sistemi kontrol altına almak, belirli işleri otomatize etmek ve uzaktan sistemi kontrolü için kullanırlar.
+						<br>
+						<br>
 						<h3>Peki Zararlı Yazılımlar neden WMI kullanıyor</h3>
 						<p>Aynı iş farklı amaç. Bazı örnekleri ise; Uzaktan sistemi kontrol etmek, güvenlik ayarlarını değiştirmek, sistem hakkında bilgi toplamak, kullanıcı ve grup yetkilerini değiştirmek, sistem ayarlarını bozmak veya değiştirmek, processleri zamanlayarak istenilen zamanda çalıştırmak, kod çalıştırmak
+						<br>
+						<br>
 						<h3>WQL Nedir</h3>
 						<p>WMI Query Language (SQL For WMI), Bildiğimiz SQL mantığında çalışan bir sorgu dilidir.
 						<p>Örnek bi WQL sorgusu: SELECT * FROM Win32_Service WHERE State='Stopped'
+						<br>
+						<br>
 						<h3>WMI Sorgu Türleri</h3>
 						<p>Senkron sorgu: küçük sorgular veya yerel bir sisteme yapılan sorgular için iyidir.
 						<p>Asenkron sorgu: Asenkron sorgular daha karmaşıktır ve daha düşük düzeyde güvenlik sağlar, ancak genellikle sistem performansını iyileştirir.
+						<br>
+						<br>
 						<h3>Senkron Sorgu</h3>
 						<p>Bu sorgu türü sadece 1 adet interface gerektirir. Bu nedenle de asenkron sorguya göre kullanması kolaydır. Fakat senkron sorgu, uygulama bir network üzerinden büyük sorgular yaparken kilitlenmesine sebep olabilir. Daha çok küçük sorgular için tavsiye edilir.
+						<br>
+						<br>
 						<h3>Asenkron Sorgu</h3>
 						<p>Asenkron sorgu, kodlamak zor olsa da, sistem veya ağ performansının büyük bir veri grubunun sorgulanmasından etkileneceği durumlarda tercih edilen sorgu türüdür. Fakat düzgün ayarlanmadığı zaman performans artışı yerine düşüş yaşanabilir. Kullanmak için programlama dillerini belirli bir seviyede bilmek gerekir.
+						<br>
+						<br>
 						<h3>Senkron vs Asenkron</h3>
 						<img src="assets/img/wmi.jpg" alt="" srcset="">
 						<p>
 						<p>Örnek kullanım alanları;
 						<p>Senkron sorgu: Bir Trojan zararlısı, zararlı linkten payload indirmek için senkron sorgu kullanması daha mantıklıdır.
 						<p>Asenkron sorgu: Bir Worm zararlısı, bağlı olduğu ağdaki sistemlere bulaşmak için bu sorguyu kullanırsa hem daha verimli hem de sıkıntı yaşama ihtimalini düşürür.
+						<br>
+						<br>
 						<h3>Bir Zararlının WMI Kullandığının En Belirgin Göstergesi</h3>
 						<p>Şüphelendiğimiz bir zararlı, wmic.exe’ye şüpheli bir parametre gönderip çalıştırıyorsa WMI kullandığını söyleyebiliriz.
 						<p>Örnek olarak: wmic.exe shadowcopy delete parametresi ile zararlı, sistemde ki shadow dosyaları silebilmektedir.
+						<br>
+						<br>
 						<h3>Zararlı yazılımların kullandığı bazı WMI teknikleri</h3>
 						<p>Zararlılar, Win32_ComputerSystem sorgusunu yapıp dönüş değerine bakarak kendisinin Vmware, VirtualBox gibi sanallaştırma ortamlarında çalıştıklarını anlayabilirler
 						<p>Miner Downloader zararlısı, wmi sorgularını kullanarak  internete bağlı olup olmadığını anlayabilmektedir.
 						<p>winmgmts:{impersonationLevel=Impersonate}!\\.\root\CIMV2:Win32_PingStatus.Address= ‘www.google.com’
 						<p>Not: impersonationLevel, WMI’ya bağlanmak için kullanılacak seviyeyi belirtir. Impersonate seviyesi WMI sorguları yapmak için önerilen seviyedir.
+						<br>
+						<br>
 						<h3>WMI Sorgularını çalıştırma</h3>
 						<p>WMI sorgularını bir çok şekilde çalıştırabiliriz; Powershell, Powershell Script, VBScript, C/C++, Python, WMI Test Tool (WBEMTest.exe), Third Party Services (SolarWinds  vs.)
 
