@@ -15,10 +15,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
     <link rel="stylesheet" href="assets/css/scroll-bar.css">
+	<script 
+	src="assets/scripts/handler.js"	
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	></script>
 	<style> 
 body { 
  background-color: #1b1b21; 
- 
  } 
 </style> 
 </head>
@@ -63,41 +66,20 @@ body {
                         <ul>
                             <li>
                                 <div class="blog-text-date" style="color:white">
-                                    <!-- 23 May 2021 -->
+                                    29 Jan 2022
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="blog-text-title" style="color:white">
-                        Projects
+                        KillerZ Email Query Demo
                     </div>
                     <div class="blog-text" style="color:white" >
-						<p>
-						<!-- <h3>Alien Technical Analysis Report</h3> -->
-						<h4><a href="https://github.com/Haxrein/Malware-Analysis-Reports/blob/main/alien_technical_analysis_report.pdf" style="text-decoration:none;color:white;">Alien Technical Analysis Report</a></h4>
-						<p>
+						<h3>Enter an email to password query.</h3>
 						<br>
-						<!-- <h3>Darkside Ransomware Technical Analysis Report</h3> -->
-						<h4><a href="https://github.com/Haxrein/Malware-Analysis-Reports/blob/main/darkside_ransomware_technical_analysis_report.pdf" style="text-decoration:none;color:white;">Darkside Ransomware Technical Analysis Report</a></h4>
-						<p>
-						<br>
-						<!-- <h3>Netwire RAT Technical Analysis Report</h3> -->
-						<h4><a href="https://github.com/Haxrein/Malware-Analysis-Reports/blob/main/netwire_technical_analysis_report.pdf" style="text-decoration:none;color:white;">Netwire RAT Technical Analysis Report</a></h4>
-						<p>
-						<br>
-						<!-- <h3>DFMAndroid</h3> -->
-						<h4><a href="https://github.com/ZAYOTEM/DFMAndroid" style="text-decoration:none;color:white;">DFMAndroid</a></h4>
-						<p>IDA script of Dynamic Function Mapper for Android
-						<p>
-						<br>
-						<!-- <h3>IdaCallParser</h3> -->
-						<h4><a href="https://github.com/ZAYOTEM/IdaCallParser" style="text-decoration:none;color:white;">IdaCallParser</a></h4>
-						<p>When we making analyze of malicious executable files, sometimes we encounter with some API obfuscation methods. In these times, we need extract register calls's adressess. This tool make this for you!
-						<p>
-						<br>
-						<!-- <h3>MagicBytes</h3> -->
-						<h4><a href="https://github.com/Haxrein/MagicBytes" style="text-decoration:none;color:white;">MagicBytes</a></h4>
-						<p>Fixes corrupted Magic Bytes for PNG, JPG and JPEG
+						<input class="button" type="text" id="inputzone" style="width: 400px; height: 45px;"><br><br>
+						<button id="email" style="height: 30px; width: 400px;" class="button">Query</button>
+						<p id="demo"></p>
                     </div>
                 </div>
             </div>
