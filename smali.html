@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halil Filik</title>
+
+    <link rel="shortcut icon" href="assets/img/icon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <link rel="stylesheet" href="assets/css/scroll-bar.css">
+	<style> 
+body { 
+ background-color: #1b1b21; 
+ } 
+</style> 
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-wrapper mt-5">
+                <div class="row header-content">
+                    <div class="header-title col-md-8" style="visibility: hidden;">
+                        <a href="index.html">Blog Title</a>
+                    </div>
+                    <div class="header-menu col-md-3">
+                        <ul>
+                            <li>
+                                 <a href="index.html" class="btn btn-outline-secondary" role="button" style="color:white;">Home</a>
+                            </li>
+                            <li>
+                                 <a href="projects.html" class="btn btn-outline-secondary" role="button" style="color:white;">Projects</a>
+                            </li>
+                            <li>
+                                <!-- <a href="index.html" style="color:white">Home</a> -->
+								<a href="index.html" class="btn btn-outline-secondary" role="button" style="color:white;">About</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-wrapper">
+        <div class="container mt-4" style="background-color: #1b1b21;">
+            <div class="blog-container" >
+                <div class="blog-top-title" style="color:white">
+                    Halil Filik
+                </div>
+                <div class="blog-container-text" style="background-color: #1b1b21;">
+                    <div class="blog-text-meta-info">
+                        <ul>
+                            <li>
+                                <div class="blog-text-date" style="color:white">
+                                    29 Aug 2021
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="blog-text-title" style="color:white">
+                        Smali-Dex
+                    </div>
+                    <div class="blog-text" style="color:white" >
+						<h3>Dex Nedir?</h3>
+						<br>
+						<img src="assets/img/dex.jpg" alt="" srcset="" style="object-fit:contain;">
+						<br>
+						<br>
+						<h3>DEX DEBUGGING</h3>
+						<br>
+						<p>Smali kodlarına DEBUGGER üzerinden değişiklik yapılamamakta. Sadece REGISTERLAR üzerinden değişiklik yapabiliriz.</p>
+						<br>
+						<p>Eğer Smali kodlarında değişiklik yapmak gerekiyorsa, APK’yı parse edip, smali kodlarını düzenleyip, build edip, imzalamamız gerekiyor.</p>	
+						<br>
+						<h3>DEBUG İÇİN GEREKENLER</h3>
+						<br>
+						<p>IDA PRO veya JEB Decompiler Pro
+						<br>
+						<p>GENYMOTION veya alternatif emülator</p>
+						<p>ADB</p>
+						<p>Xposed Framework => Xdebug modülü // APK’yı debugable yapmak için
+						<br>
+						<h3>SMALI KODLARI NEDIR?</h3>
+						<br>
+						<p>Smali kodlarının çalışma mantığı, Assembly’e benzerdir.
+						<br>
+						<p>Smali kod örneği
+						<br>
+						<p>const 	v0, 1	
+						<br>
+						<p>Assembly kod örneği
+						<br>
+						<p>mov eax, 1
+						<br>
+						<h3>SMALI REGISTERS - v türü</h3>
+						<br>
+						<p>local register
+						<br>
+						<p>v0,v1,v2,v3,v4,v5,v6,v7…
+						<br>
+						<p>Eğer belirtilmemiş ise default olarak 2 tane local register vardır. (v0,v1)
+						<br>
+						<p>Bir method bir değer döndürüyorsa genelde v0 kullanır.
+						<br>
+						<h3>SMALI REGISTERS - p türü</h3>	
+						<br>
+						<p>Parametre register’ı
+						<br>
+						<p>p0,p1,p2,p3,p4,p5,p6,p7…
+						<br>
+						<br>
+						<h5>Böyle bir method'dan gelen parametreler smali'de şu şekilde gözükür:</h5>
+						<br>
+						<p>public void EkranaYazdır(int yükseklik, int genişlik, string yazı)
+						<br>
+						<p>	const/4 v0, #yükseklik
+						<br>
+						<p>	const/4 v1, #genişlik
+						<br>
+						<p>	const-string v2, #yazı
+						<br>
+						<p>	invoke-static {v0,v1,v2}, Lcom/example/android/basicjni/MainActivity;->EkranaYazdır(IILjava/lang/String;)V
+						<br>
+						<p>p0 this
+						<p>p1 yükseklik
+						<p>p2 genişlik
+						<p>p3 yazı
+						<br>
+						<br>
+						<h5>Eğer method static olursa işler biraz daha değişmekte</h5>
+						<br>
+						<p>public static void EkranaYazdır(int yükseklik, int genişlik, string yazi)
+						<br>
+						<p>	const/4 v0, #yükseklik
+						<br>
+						<p>	const/4 v1, #genişlik
+						<br>
+						<p>	const-string v2, #yazı
+						<br>
+						<p>	invoke-static {v0,v1,v2}, Lcom/example/android/basicjni/MainActivity;->EkranaYazdır(IILjava/lang/String;)V
+						<br>
+						<br>
+						<p>v0		birinci local register
+						<p>v1		ikinci local register
+						<p>v2		p0 yükseklik	
+						<p>v3		p1 genişlik
+						<p>v4		p2 yazı				
+						<br>
+						<br>
+						<h3>SMALI REGISTER LONG-DOUBLE</h3>
+						<br>
+						<p>Long ve Double türünde değerleri tutmak için kullanılır.
+						<br>
+						<p>Smali registerları 32-bit olduğundan LONG ve DOUBLE için 2 tane v veya p register’ı atanır.
+						<br>
+						<br>
+						<p>public static void zayotem(int a, double b, string c)
+						<br>
+						<p>	const/4 v0, #a
+						<br>
+						<p>	const-wide/32 v1, #b
+						<br>
+						<p>	const-string v2, #c
+						<br>
+						<p>	invoke-static {v0,v1,v2}, Lcom/example/android/basicjni/MainActivity;->zayotem(IDLjava/lang/String;)V
+						<br>
+						<br>
+						<p>v0		birinci local register
+						<p>v1		ikinci local register
+						<p>v2		p0 a
+						<p>v3		p1,p2 b
+						<p>v4		p3 c
+						<br>
+						<h3>JAVA VS SMALI</h3>
+						<br>
+						<p>Java ile smali registerların farkları
+						<br>
+						<h5>JAVA</h5>
+						<p>
+						<p>void zayotem(int i) {
+						<br>
+						<p>	if (i == 0) {
+					    <p>			s = "zayotem 1";
+						<p>		}
+						<p>		else {
+						<p>			s = "zayotem 2";
+						<p>
+						<p>	return;
+						<p>		}
+						<br>
+						<br>
+						<h5>SMALI</h5>
+						<br>
+						<p>if-nez v0, :cond_0
+						<p>const-string v2, "zayotem 1"
+						<br>
+						<p>:goto_0
+						<p>return-void
+						<br>
+						<p>:cond_0
+						<p>const-string v2, "zayotem 2"
+						<p>goto :goto_0
+						<br>
+						<br>
+						<h3>SMALI REGISTERLARINI IDA PRO'DA WATCH LIST’DE IZLEME</h3>
+						<br>
+						<p>Örneğin bir const-string olarak v0 a atanmış değeri izlemek istiyorsak watch list de (String)v0 olarak eklememiz gerekiyor. Yani tipini belirtiyoruz.
+						<br>
+						<p>const-string v0, "zayotem"
+						<br>
+						<br>
+						<p>v0 = invalid value
+						<p>(String)v0 = "zayotem"
+						<p>(int)v0 = 0x147F242
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid mt-5"></div>
+            <hr>
+        </div>
+        <div class="container text-center mt-5 mb-5" >
+            <div class="copyright" style="color: white;">
+                © 2022 All rights reserved.
+            </div>   
+        </div>
+        
+    </footer>
+
+</body>
+
+</html>
